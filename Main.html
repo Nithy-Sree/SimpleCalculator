@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calci.css" />
+    </head>
+    
+    <body>
+        <div class = "main">
+            <h3>Calculator</h3>
+        
+            <div class="inputs">
+                <input type="text" class="textview" name="textview" id="input1" placeholder="Enter a value" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');"/><br>
+                <input type="text" class="textview" name="textview" id="input2" placeholder="Enter a value" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" />
+                <p id="result"></p>
+            </div>
+            <div class="buttons">
+                <div class = "btn-group">
+                    <input class="button" type="button" name="add" id="add" value="+" onclick="add()" />
+                    <input class="button" type="button" name="sub" id="sub" value="-" onclick="sub()" />
+                </div>
+                <div class = "btn-group">
+                    <input class="button" type="button" name="mul" id="mul" value="*" onclick="mul()" />
+                    <input class="button" type="button" name="div" id="div" value="/" onclick="div()" />
+                    <input class="button" type="button" name="mod" id="mod" value="%" onclick="mod()" />
+                <!--<input class="button" type="submit" name="enter" id="enter" value="enter" />-->
+                </div>
+                <input class="button" type="reset" name="clear" id="clear" value="clear" onclick="clean()" />
+            </div>
+        </div>
+    </body>
+    <script src="Calculation.js"></script>
+</html>
